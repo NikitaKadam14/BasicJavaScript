@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title></title>
+        <script>
+            let num1,num2,operator;
+            function onPlusClick(){
+                num1=Number(document.getElementById("firstNumber").value);
+                num2=Number(document.getElementById("secondNumber").value);
+                operator="+";
+            }
+            function onMinusClick(){
+                num1=Number(document.getElementById("firstNumber").value);
+                num2=Number(document.getElementById("secondNumber").value);
+                operator="-";
+            }
+            function onMultiplyClick(){
+                num1=Number(document.getElementById("firstNumber").value);
+                num2=Number(document.getElementById("secondNumber").value);
+                operator="*";
+            }
+            function onDivideClick(){
+                num1=Number(document.getElementById("firstNumber").value);
+                num2=Number(document.getElementById("secondNumber").value);
+                operator="/";
+            }
+            function onEqualClick(){
+                let result;
+                switch(operator){
+                    case("+"):
+                    result=num1+num2;
+                    break;
+                    case("-"):
+                    result=num1-num2;
+                    break;
+                    case("*"):
+                    result=num1*num2;
+                    break;
+                    case("/"):
+                    result=num1/num2;
+                    break;
+                    default:
+                        "invalid";
+            }
+            document.getElementById("result").innerText=`result:${result}`;
+        }
+        function onClearClick(){
+            num1="";
+            num2="";
+            document.getElementById("firstNumber").value="";
+            document.getElementById("secondNumber").value="";
+            document.getElementById("result").innerText="";
+
+
+        }
+
+        </script>
+    </head>
+    <body>
+        <h1>Calculator</h1>
+        <label>Enter first Number</label><br/>
+        <input type="text" id="firstNumber" name="firstNumber"><br/> 
+        <label>Enter second Number</label><br/>
+        <input type="text" id="secondNumber" name="secondNumber"><br/> 
+        <button onclick="onPlusClick()">/</button>
+        <button onclick="onMinusClick()">-</button>
+        <button onclick="onMultiplyClick()">*</button>
+        <button onclick="onDivideClick()">/</button>
+        <button onclick="onEqualClick()">=</button>
+        <button onclick="onClearClick()">Clear</button>
+        <div id="result"></div>
+        
+    </body>
+</html>

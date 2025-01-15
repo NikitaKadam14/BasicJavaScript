@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>areaofrectangle</title>
+</head>
+<style>
+
+</style>
+<script>
+    function calculateText() {
+        const length = document.getElementById("length").value;
+        console.log('length: ', length, typeof length)
+        const breadth = document.getElementById("breadth").value;
+        console.log('breadth: ', breadth, typeof breadth)
+        if ((length === 0 || length === "") && (breadth === 0 || breadth === "")) {
+            document.getElementById("areaofrectangle").innerText = `Error:please fill the required fields`;
+
+        }
+
+
+        else if (length === "" && breadth !== "") {
+            document.getElementById("areaofrectangle").innerText = `Error:Enter length`;
+
+        }
+        else if (length !== "" && breadth === "") {
+            document.getElementById("areaofrectangle").innerText = `Error:Enter breadth`;
+
+        }
+        else {
+            if (isNaN(length) && isNaN(breadth)) {
+                document.getElementById("areaofrectangle").innerText = `Error:invalid fields`;
+            } else if (isNaN(length) && !isNaN(breadth)) {
+                document.getElementById("areaofrectangle").innerText = `Error:invalid length`;
+            }
+            else if (!isNaN(length) && isNaN(breadth)) {
+                document.getElementById("areaofrectangle").innerText = `Error:invalid breadth`;
+            } else {
+
+                area = length * breadth;
+                document.getElementById("areaofrectangle").innerText = `area:${area}`;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+</script>
+
+<body>
+    <h1>Area of rectangle</h1>
+    <label for="length">length:</label><br />
+    <input type="text" id="length" name="length"><br />
+    <label for="breadth">breadth:</label><br />
+    <input type="text" id="breadth" name="breadth"><br />
+    <button onclick="calculateText()">Calculate</button>
+    <div id="areaofrectangle"></div>
+
+</body>
+
+</html>

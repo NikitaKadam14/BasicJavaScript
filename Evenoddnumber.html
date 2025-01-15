@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>Evenoddnumber</title>
+    <script>
+        function checkEvenOdd() {
+            const number = document.getElementById("number").value;
+            if(number===""|| number===0){
+                document.getElementById("Evenoddnumber").innerText=`please fill therequired number`;
+
+            }
+            
+
+            else if(number%2===0){
+                document.getElementById("Evenoddnumber").innerText=`even number`;
+           
+                
+
+            }
+            else if(isNaN(number)){
+                document.getElementById("Evenoddnumber").innerText=`invalid number`;
+
+
+            }
+            
+            else{
+                document.getElementById("Evenoddnumber").innerText=`odd number`;
+           
+                
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Even odd number</h1>
+    <label for="number">number:</label><br />
+    <input type="text" id="number" name="number"><br />
+    <button onclick="checkEvenOdd()">Checknumber</button>
+    <div id="Evenoddnumber"></div>
+</body>
+
+</html>

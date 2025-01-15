@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>maximumoftwonumber</title>
+        <script>
+            function checkText(){
+                const firstnumber=document.getElementById("firstnumber").value;
+                const secondnumber=document.getElementById("secondnumber").value;
+                document.getElementById("maximumnumber").innerText=`firstnumber:${firstnumber} and secondnumber:${secondnumber}`;
+                if((firstnumber===0 || firstnumber==="") && (secondnumber===0 || secondnumber==="")){
+                    document.getElementById("maximumnumber").innerText=`please fill therequired number`;
+                    
+
+                }
+
+                else if(isNaN(firstnumber)&&isNaN(secondnumber)){
+                document.getElementById("maximumnumber").innerText=`invalid field`;
+
+
+            }
+
+                else if(isNaN(firstnumber) && !isNaN(secondnumber)){
+                    document.getElementById("maximumnumber").innerText=`invalid first number`;
+
+                }
+                
+            
+                else if(!isNaN(firstnumber) && isNaN(secondnumber)){
+                    document.getElementById("maximumnumber").innerText=`invalid second number`;
+
+                    
+                }
+                else if(firstnumber>secondnumber){
+                    document.getElementById("maximumnumber").innerText=`first number maximum:${firstnumber}`;
+
+                    
+                }
+                else{
+                    document.getElementById("maximumnumber").innerText=`second number mimimum:${secondnumber}`;
+
+                }
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>Maximum of two number</h1>
+        <label for="firstnumber">firstnumber</label><br/>
+        <input type="text" id="firstnumber" name="firstnumber"><br/>
+        <label for="secondnumber">secondnumber</label><br/>
+        <input type="text" id="secondnumber" name="secondnumber"><br/>
+        <button onclick="checkText()">check</button>
+        <div id="maximumnumber"></div>
+
+    </body>
+</html>

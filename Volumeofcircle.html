@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>Volume of circle</title>
+    <style>
+
+    </style>
+    <script>
+        function calculateText() {
+            const Radius = document.getElementById("Radius").value;
+            const height = document.getElementById("height").value;
+            const pi = 3.14;
+            
+            if ((Radius === 0 || Radius === "") && (height === 0 || height === "")) {
+                document.getElementById("volumeofcircle").innerText = `Error:please fill the required fields`;
+
+            }
+            else if (Radius === "" && height !== "") {
+                document.getElementById("volumeofcircle").innerText = `Error:Enter Radius`;
+
+            }
+            else if (Radius !== "" && height === "") {
+                document.getElementById("volumeofcircle").innerText = `Error:Enter height`;
+
+            }
+            else {
+                if (isNaN(Radius) && isNaN(height)) {
+                    document.getElementById("volumeofcircle").innerText = `Error:invalid fields`;
+                } else if (isNaN(Radius) && !isNaN(height)) {
+                    document.getElementById("volumeofcircle").innerText = `Error:invalid Radius`;
+                }
+                else if (!isNaN(Radius) && isNaN(height)) {
+                    document.getElementById("volumeofcircle").innerText = `Error:invalid height`;
+                }
+                else {
+                    volume = pi * Radius * Radius * height;
+                    document.getElementById("volumeofcircle").innerText = `volume:${volume}`;
+
+
+                }
+
+
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Volume of circle</h1>
+    <label for="Radius">Radius:</label><br />
+    <input type="text" id="Radius" name="Radius"><br />
+    <label for="height">height:</label><br />
+    <input type="text" id="height" name="height"><br />
+    <button onclick="calculateText()">Calculate</button>
+    <div id="volumeofcircle"></div>
+</body>
+
+</html>

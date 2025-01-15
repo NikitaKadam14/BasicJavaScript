@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>printnumber</title>
+    <script>
+        function checkText() {
+            const number=Number(document.getElementById("number").value);
+            // var number=prompt("please enter a number");
+            let str="";
+            for (let i=0; i <= 20; i++) {
+                str=str+i+"";
+                
+            
+                
+                
+            }
+            console.log('str: ', str)
+
+            document.getElementById("printnumber").innerText=`number:${str}`;
+
+
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+    <h1>Print Number</h1>
+    <label for="Number">Number:</label><br />
+    <input type="text" name="Number" id="number"><br />
+    <button onclick="checkText()">Check</button>
+    <div id="printnumber"></div>
+</body>
+
+</html>

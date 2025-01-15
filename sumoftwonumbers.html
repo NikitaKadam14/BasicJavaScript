@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title></title>
+        <script>
+            function checkText(){
+                const firstnumber=Number(document.getElementById("firstnumber").value);
+                console.log('firstnumber: ', firstnumber, typeof firstnumber)
+                const secondnumber=Number(document.getElementById("secondnumber").value);
+            
+                const sum=firstnumber+secondnumber;
+                document.getElementById("sumofnumbers").innerText=`sum:${sum}`;
+             
+            if((firstnumber===0 || firstnumber==="" && secondnumber===0 || secondnumber==="")){
+                document.getElementById("sumofnumbers").innerText=`please fill the required filled`;
+
+
+            }
+            else if(isNaN(firstnumber) && isNaN(secondnumber)){
+                document.getElementById("sumofnumbers").innerText=`invalid fields`;
+                
+
+            }
+            else if(isNaN(firstnumber) && !isNaN(secondnumber)){
+                    document.getElementById("sumofnumbers").innerText=`invalid first number`;
+
+                    
+                }
+            
+            else if(!isNaN(firstnumber) && isNaN(secondnumber)){
+                    document.getElementById("sumofnumbers").innerText=`invalid second number`;
+
+                    
+                }
+            else{
+                const  sum=firstnumber+secondnumber;
+                document.getElementById("sumofnumbers").innerText=`sum:${sum}`;
+            }
+        }
+
+
+
+        </script>
+    </head>
+    <body>
+        <h1>sum of two numbers</h1>
+        <label for="firstnumber">firstnumber</label><br/>
+        <input type="text" id="firstnumber" name="firstnumber"><br/>
+        <label for="secondnumber">secondnumber</label><br/>
+        <input type="text" id="secondnumber" name="secondnumber"><br/>
+        <button onclick="checkText()">check</button>
+        <div id="sumofnumbers"></div>
+    </body>
+</html>
