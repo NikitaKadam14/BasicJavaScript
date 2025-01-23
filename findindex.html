@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title></title>
+    <script>
+        function onCalculateClick() {
+            let arrayofNumber = [];
+            let arr = [];
+            let index;
+
+            arrayofNumber = document.getElementById("arrayofNumber").value;
+            arr = arrayofNumber.split(",");
+            console.log(arr);
+            findNumber = document.getElementById("findNumber").value;
+
+            for (let i = 0; i < arr.length; i++) {
+                if (findNumber === arr[i]) {
+                    index = i;
+                    console.log(index);
+
+                }
+                else {
+                    console.log("number is not valid");
+                  
+                }
+
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Find index</h1>
+    <label>Array of Number</label>
+    <input type="text" id="arrayofNumber" name="Array of Number"><br />
+    <label> find Number</label>
+    <input type="text" id="findNumber" name="Find Number"><br />
+    <button onclick="onCalculateClick()">Calculate</button>
+    <div id="result"></div>
+
+
+
+</body>
+
+</html>

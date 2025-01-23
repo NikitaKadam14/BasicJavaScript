@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Transportation Mode Selection</title>
+    <script>
+        function chooseTransport() {
+            let distance = document.getElementById("distance").value;
+            let result = "";
+            if (distance < 3) {
+                result = "Walk";
+            } else if (distance >= 3 && distance <= 15) {
+                result = "Bike";
+            } else if (distance > 15) {
+                result = "Car";
+            }
+            document.getElementById("result").innerText=result;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Transportation Mode Selection</h1>
+    <input type="number" id="distance" placeholder="Enter distance in km">
+    <button onclick="chooseTransport()">Submit</button>
+    <div id="result"></div>
+
+
+</body>
+
+</html>

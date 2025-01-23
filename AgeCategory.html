@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>AgeGroup Categorization</title>
+        <script>
+        function onAgeCategorization(){
+           let age=document.getElementById("age").value;
+            if(age<13){
+                document.getElementById("Category").innerText="Child";
+            }
+            else if(age>=13 && age<=19){
+                document.getElementById("Category").innerText="Teenager";
+
+            }
+            else if(age>=19 && age<=59){
+                document.getElementById("Category").innerText="Adult";
+
+            }
+            else{
+                document.getElementById("Category").innerText="Senior";
+
+
+            }
+
+        }
+
+        </script>
+    </head>
+    <body>
+        <h1>Age Categorization</h1>
+        <label>Enter Age Categorization:</label>
+        <input type="number" placeholder="Enter your Age..." id="age"/>
+        <button onclick="onAgeCategorization()">Submit and Calculate Age</button>
+        <div id="Category">Categorization</div>
+    </body>
+</html>

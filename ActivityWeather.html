@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Activity Weather</title>
+    <script>
+        function onWeatherCheck(){
+            let weather=document.getElementById("weather").value;
+            let suggestion="";
+            if(weather==="sunny"){
+                suggestion="Go for a walk";
+
+            }
+            else if(weather==="Rainy"){
+                suggestion="Read a book";
+
+            }
+            else if(weather==="Snowy"){
+                suggestion="Build a snowman";
+
+            }
+            document.getElementById("checkWeather").innerText = suggestion;
+
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Activity Weather</h1>
+    <label>Enter Weather:</label>
+    <input type="text" placeholder="Enter Weather..." id="weather"/>
+    <button onclick="onWeatherCheck()">Check</button>
+    <div id="checkWeather"></div>
+
+    
+</body>
+</html>

@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <title>StudentInformation</title>
+    <script>
+        let arr = [];
+        function SubmitClick() {
+            let student = {};
+            arr.push(student);
+            student["fullname"] = document.getElementById("fullname").value;
+            student["age"] = document.getElementById("age").value;
+            student["email"] = document.getElementById("email").value;
+            student["rollno"] = document.getElementById("rollno").value;
+            student["mobilenumber"] = document.getElementById("mobilenumber").value;
+            console.log(student);
+            console.log(arr);
+            document.getElementById("fullname").value = "";
+            document.getElementById("age").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("rollno").value = "";
+            document.getElementById("mobilenumber").value = "";
+
+            let table = document.getElementById("studentTable").getElementsByTagName('tbody')[0]
+            let newRow = table.insertRow(table.rows.length);
+            let cell1 = newRow.insertCell(0);
+            let cell2 = newRow.insertCell(1);
+            let cell3 = newRow.insertCell(2);
+            let cell4 = newRow.insertCell(3);
+            let cell5 = newRow.insertCell(4);
+            cell1.innerHTML = student.fullname;
+            cell2.innerHTML =  student.age;
+            cell3.innerHTML =  student.email;
+            cell4.innerHTML =  student.rollno;
+            cell5.innerHTML = student.mobilenumber;
+           
+           
+
+
+
+
+        }
+
+
+
+        // students.forEach(student => {
+        //     const row = document.createElement('tr');
+        //     row.innerHTML = `
+        //       <td>${student.fullname}</td>
+        //       <td>${student.age}</td>
+        //       <td>${student.email}</td>
+        //       <td>${student.rollno}</td>
+        //       <td>${student.mobilenumber}</td>`;
+        //     }
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Student Information</h1>
+    <label>Full Name</label><br />
+    <input type="text" id="fullname" name="Full Name"><br />
+    <label>Age</label><br />
+    <input type="text" id="age" name="Age"><br />
+    <label>Email</label><br />
+    <input type="text" id="email" name="Email"><br />
+    <label>Roll No</label><br />
+    <input type="text" id="rollno" name="Roll Number"><br />
+    <label>Mobile Number</label><br />
+    <input type="text" id="mobilenumber" name="Mobile Number"><br />
+    <button onclick="SubmitClick()">Submit</button>
+    <div id="result"></div>
+    <h2>Student Information Table</h2>
+    <table id="studentTable" border="1">
+        <thead>
+            <tr>
+                <th>fullname</th>
+                <th>age</th>
+                <th>email</th>
+                <th>rollno</th>
+                <th>mobilenumber</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+
+
+</body>
+
+</html>

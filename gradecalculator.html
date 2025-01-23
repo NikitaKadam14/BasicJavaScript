@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>Grade Calculator</title>
+    <script>
+        function onCalculateGrade(){
+            let score = document.getElementById("score").value;
+            let Grade="";
+            if(score>=90){
+                Grade="A";
+            }
+            else if(score>=80){
+                Grade="B";
+            }
+            else if(score>=70){
+                Grade="C";
+            }
+            else if(score>=60){
+                Grade="D";
+            }
+            else{
+                Grade="f";
+            }
+            document.getElementById("StudentGrade").innerText=`${Grade}`;
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Grade Calculator</h1>
+    <label>Enter Score:</label>
+    <input type="number" placeholder="Enter Score..." id="score"/>
+    <button onclick="onCalculateGrade()">Calculate Grade</button>
+    <div id="StudentGrade"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Coffee Customization</title>
+    <script>
+        function onCustomizeCoffee() {
+            let size = document.getElementById("size").value;
+            let extrashot = document.getElementById("extrashot").value;
+            let order="you order a" + size + "Coffe";
+            if (extrashot) {
+                order += "with an extra shot of expresso.";
+            }
+            else {
+                order += ".";
+
+            }
+            document.getElementById("order").innerText = order;
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Coffee Customization</h1>
+    <label>Size:</label>
+    <select id="size">
+        <option value="">select</option>
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+
+    </select>
+    <input type="text" id="extrashot" />
+    <button onclick="onCustomizeCoffee()">Submit</button>
+    <div id="order"></div>
+
+</body>
+
+</html>

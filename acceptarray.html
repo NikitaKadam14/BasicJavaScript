@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Accept array</title>
+        <script>
+            function onSubmitClick(){
+                let number;
+                let arr=[];
+                let arr1=[];
+                
+                number=document.getElementById("number").value;
+                arr=number.split(",");
+                console.log(typeof(number));
+                console.log(arr);
+                for(let i=0; i<arr.length;i++){
+                    console.log(arr[i]);
+                    arr1.push(arr[i] * arr[i]);
+                    console.log(arr1);
+                }
+
+
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>Accept array</h1>
+        <input type="text" id="number" name="Number"><br/>
+        <button onclick="onSubmitClick()">Calculate</button>
+        <div id="result"></div>
+    </body>
+</html>
