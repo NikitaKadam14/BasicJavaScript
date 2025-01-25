@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Multiplication Table</title>
+    <script>
+        function onMultiplicationClick() {
+            arr = [];
+            let number = document.getElementById("number").value;
+            let print = "";
+            for (let i = 1; i <= 10; i++) {
+                print = number * i;
+                console.log(print)
+                
+            }
+            // document.getElementById("Check").innerText=`${print}`;
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Multiplication Table</h1>
+    <label for="number">number:</label><br />
+    <input type="text" placeholder="Enter a Number..." id="number"><br />
+    <button onclick="onMultiplicationClick()">Calculate</button>
+    <div id="Check"></div>
+
+</body>
+
+</html>

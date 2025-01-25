@@ -6,8 +6,8 @@
     <script>
         function onLeapCheck() {
             leapyear = document.getElementById("leapyear").value;
-            let result="";
-            if (leapyear % 4 === 0 && leapyear % 100 !== 0 || leapyear % 400 === 0){
+            let result = "";
+            if ((leapyear % 4 === 0 && leapyear % 100 !== 0) || leapyear % 400 === 0) {
                 result = leapyear + " is a leap year.";
             } else {
                 result = leapyear + " is not a leap year.";

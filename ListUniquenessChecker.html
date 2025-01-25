@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>List Uniqueness Checker</title>
+    <script>
+        function onUniquenessCheckClick() {
+            let arr = [];
+            list = document.getElementById("list").value;
+            arr = list.split(",")
+            console.log(arr)
+            for (let i = 0; i < arr.length; i++) {
+                if (list.includes(arr[i])) {
+                    document.getElementById("uniquenessCheck").innerText = `Duplicate found:+${arr[i]}`;
+                    return;
+                }
+            }
+            document.getElementById("uniquenessCheck").innerText = `Duplicate found:+${arr[i]}`;
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>List Uniqueness Checker</h1>
+    <label>Enter List:</label><br />
+    <input type="text" placeholder="Enter a items..." id="list"><br />
+    <button onclick="onUniquenessCheckClick()">Check</button>
+    <div id="uniquenessCheck"></div>
+
+
+</body>
+
+</html>

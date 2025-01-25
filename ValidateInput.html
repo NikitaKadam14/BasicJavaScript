@@ -1,0 +1,40 @@
+<html>
+
+<head>
+
+    <title>Validate Input</title>
+    <script>
+        function onValidateClick() {
+            input = document.getElementById("input").value;
+            for (let i = 0; i < input.length; i++) {
+
+                if (input !==null && !isNaN(input)) {
+    
+
+                }if(input>=1 && input<=10){
+                    document.getElementById("validateinput").innerText =`${input}please enter valid input`;
+                }
+                else{
+                    document.getElementById("validateinput").innerText =`${input}please enter not valid input`;
+                }
+
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Validate Input</h1>
+    <label>Enter Number</label>
+    <input type="text" placeholder="Enter a Number..." id="input" />
+    <button onclick="onValidateClick()">Calculate</button>
+    <div id="validateinput"></div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Sum of Even Number</title>
+    <script>
+        function checkEvenNumber() {
+            let num = document.getElementById("num").value;
+            let sum = 0;
+            for (let i = 1; i <= num; i++) {
+                if (i % 2 === 0) {
+                    sum += i;
+                }
+            }
+            document.getElementById('result').innerText = 'Sum of even numbers: ' + sum;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Sum of Even Number</h1>
+    <label for="number">number:</label><br />
+    <input type="text" placeholder="Enter a Number..." id="num"><br />
+    <button onclick="checkEvenNumber()">Check</button>
+    <div id="result"></div>
+
+</body>
+
+</html>

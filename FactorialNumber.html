@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Factorial Number</title>
+    <script>
+         function onFactorialClick() {
+            let number = document.getElementById("number").value;
+            let fact = 1;
+            for (let i = 2; i <=number; i++) {
+                fact=fact*i;
+            }
+            document.getElementById("factorialCheck").innerText=`${fact}`;
+
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Factorial Number</h1>
+    <label for="number">number:</label><br />
+    <input type="text" placeholder="Enter a Number..." id="number"><br />
+    <button onclick="onFactorialClick()">Calculate</button>
+    <div id="factorialCheck"></div>
+
+    
+</body>
+</html>

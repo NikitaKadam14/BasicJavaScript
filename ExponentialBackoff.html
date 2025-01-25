@@ -1,0 +1,30 @@
+<html>
+<head>
+   
+    <title>Exponential Backoff</title>
+    <script>
+        function exponentialBackoff(){
+            let waitTime = 1000;
+            for (let i = 0; i < 5; i++){
+                console.log(`Attempt ${i + 1}: Waiting for ${waitTime / 1000} seconds`);
+                setTimeout(() => {
+                    console.log(`Retry ${i + 1}`);
+                    if (i === 4) {
+                        console.log('Max retries reached. Stopping...');
+                    }
+                }, waitTime);
+                waitTime *= 2; 
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Exponential Backoff</h1>
+    <button onclick="exponentialBackoff()">Start Exponential Backoff</button>
+    <div id="exponentialBackoffCheker"></div>
+
+    
+</body>
+</html>

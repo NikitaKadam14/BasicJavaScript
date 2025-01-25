@@ -1,31 +1,30 @@
 <html>
-    <head>
-        <title>Maximum Number</title>
-        <script>
-            function onCalculateClick(){
-                let num1,num2;
-                num1=document.getElementById("num1").value;
-                num2=document.getElementById("num2").value;
-                if(num1>num2){
-                    console.log("Given no is maximum:"+num1);
 
-                }
-                else{
-                    console.log("Given no is minimum:"+num1);
-                }
-
-
+<head>
+    <title>Maximum Number</title>
+    <script>
+        function onCalculateClick() {
+            let num1, num2;
+            num1 = document.getElementById("num1").value;
+            num2 = document.getElementById("num2").value;
+            if (num1 > num2) {
+                console.log("Given no is maximum:" + num1);
             }
+            else {
+                console.log("Given no is minimum:" + num1);
+            }
+        }
+    </script>
+</head>
 
-        </script>
-    </head>
-    <body>
-        <h1>Maximum Number</h1>
-        <label>Num1:</label><br/>
-        <input type="text" id="num1" name="Num1"><br/>
-        <label>Num2:</label><br/>
-        <input type="text" id="num2" name="Num1"><br/>
-        <button onclick="onCalculateClick()">Calculate</button>
-        <div id="result"></div>
-    </body>
+<body>
+    <h1>Maximum Number</h1>
+    <label>Num1:</label><br />
+    <input type="text" id="num1" name="Num1"><br />
+    <label>Num2:</label><br />
+    <input type="text" id="num2" name="Num1"><br />
+    <button onclick="onCalculateClick()">Calculate</button>
+    <div id="result"></div>
+</body>
+
 </html>
